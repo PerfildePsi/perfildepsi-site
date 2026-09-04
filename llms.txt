@@ -2,32 +2,17 @@
 
 > Agência especializada em posicionamento digital e captação de pacientes particulares para o nicho de Psicologia. Ajuda psicólogas e psicólogos a captar pacientes particulares de forma recorrente e previsível, com serviços de presença digital construídos dentro das normas éticas do Conselho Federal de Psicologia (CFP).
 
-Perfil de Psi é uma agência de marketing digital brasileira, sediada em Potirendaba, São Paulo, focada exclusivamente em profissionais de Psicologia. A empresa oferece uma estrutura completa de posicionamento digital para consultórios particulares, incluindo:
+Perfil de Psi é uma agência de marketing digital brasileira, sediada em Potirendaba, São Paulo, focada exclusivamente em profissionais de Psicologia. A empresa oferece três planos de estrutura de posicionamento digital para consultórios particulares:
 
-- Gestão do Google Meu Negócio (otimização de ficha e postagens semanais para ranqueamento local);
-- Gestão de campanhas de Google Ads para captação ativa de pacientes;
-- Criação e manutenção de sites profissionais e rápidos para consultórios de Psicologia;
-- Ensaios fotográficos gerados com Inteligência Artificial para uso em redes sociais e divulgação profissional;
-- Implementação de uma Secretária IA que atende via WhatsApp, treinada na abordagem de cada profissional, capaz de atender, agendar, remarcar e fazer follow-up de pacientes, sempre em função administrativa (nunca clínica).
-
-Além do site principal, a Perfil de Psi mantém três landing pages de ofertas estratégicas: Fundação Digital (presença digital inicial), Sistema de Captação e Agendamento (aquisição ativa) e Recepção Digital (automação e atendimento por IA). Nenhuma delas promete resultado terapêutico ou quantidade de pacientes — o investimento é sempre definido após diagnóstico.
+- **Plano Presença**: otimização de Perfil da Empresa no Google (Maps), criação de site/landing page de alta conversão, pacote de retratos profissionais gerados com Inteligência Artificial e revisão de posicionamento alinhada ao Código de Ética do CFP.
+- **Plano Captação**: tudo do Plano Presença, mais gestão estratégica de anúncios no Google Ads, foco em pacientes particulares de alto valor e monitoramento de métricas de conversão.
+- **Plano Automação**: tudo do Plano Captação, mais uma Secretária IA que atende via WhatsApp 24/7, treinada na abordagem de cada profissional, capaz de fazer triagem, agendar e fazer follow-up de pacientes, sempre em função administrativa (nunca clínica), com integração ao Google Workspace e conformidade com a LGPD.
 
 Todos os serviços são desenhados para respeitar o Código de Ética Profissional do Psicólogo e as normas do CFP sobre publicidade de serviços psicológicos, incluindo a vedação ao uso de preço como propaganda, a obrigatoriedade de identificação profissional (nome e CRP) e o sigilo sobre pacientes.
 
 ## Páginas principais
 
-- [Página inicial](https://perfildepsi.com.br/): apresentação da empresa, todos os serviços, preços, planos e perguntas frequentes.
-- [Fundação Digital](https://perfildepsi.com.br/oferta-fundacao-digital.html): oferta para psicólogas(os) com presença digital fraca — Perfil da Empresa, site, fotografia e posicionamento.
-- [Sistema de Captação e Agendamento](https://perfildepsi.com.br/oferta-sistema-captacao-agendamento.html): oferta para quem já tem estrutura mínima e quer aumentar oportunidades — anúncios, landing page, CRM e follow-up.
-- [Recepção Digital](https://perfildepsi.com.br/oferta-recepcao-digital.html): oferta para consultórios com alto volume de contatos e operação manual sobrecarregada — CRM, automações e agente de atendimento por IA.
-- [Domínio Local](https://perfildepsi.com.br/oferta-dominio-local.html): otimização avançada de presença no Google/Maps para profissionais com atendimento presencial.
-- [Conversão de Presença em Agenda](https://perfildepsi.com.br/oferta-conversao-presenca-agenda.html): estrutura de conversão para quem já tem Instagram ativo mas agenda parada.
-- [Consultório Digital Online](https://perfildepsi.com.br/oferta-consultorio-digital-online.html): jornada digital confiável para profissionais que atendem exclusivamente por telepsicologia.
-- [Autoridade Local](https://perfildepsi.com.br/oferta-autoridade-local.html): posicionamento digital premium para profissionais já estabelecidos.
-- [Agenda Inteligente](https://perfildepsi.com.br/oferta-agenda-inteligente.html): organização de contatos de múltiplos canais em um só fluxo de agendamento, sem mídia paga.
-- [Reativação de Consultório](https://perfildepsi.com.br/oferta-reativacao-consultorio.html): retomada ética de contatos antigos e pacientes que pausaram o acompanhamento.
-- [Inteligência de Consultório](https://perfildepsi.com.br/oferta-inteligencia-consultorio.html): dashboard de indicadores de negócio e marketing.
-- [Diagnóstico Comercial](https://perfildepsi.com.br/oferta-diagnostico-comercial.html): serviço avulso de diagnóstico para identificar o gargalo comercial do consultório.
+- [Página inicial](https://perfildepsi.com.br/): apresentação da empresa, os três planos, como funciona, ética/LGPD e perguntas frequentes.
 - [Política de Privacidade](https://perfildepsi.com.br/politica-de-privacidade.html): como os dados de clientes, visitantes e pacientes são tratados, em conformidade com a LGPD.
 - [Termos de Uso](https://perfildepsi.com.br/termos-de-uso.html): condições de uso do site e de contratação dos serviços.
 
