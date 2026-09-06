@@ -30,6 +30,7 @@
   --radius-md:20px;
   --radius-lg:32px;
   --font-display:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-logo:"Berkshire Swash", "Fraunces", cursive;
   --font-body:"Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --maxw:1180px;
 }
@@ -111,8 +112,8 @@ p{margin:0 0 1em;}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 24px;}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .brand img{width:44px;height:44px;border-radius:10px;}
-.brand-word{font-family:var(--font-display);font-weight:600;font-size:1.32rem;color:var(--lilac-950);letter-spacing:-.01em;}
-.brand-word em{font-style:italic;color:var(--lilac-600);}
+.brand-word{font-family:var(--font-logo);font-weight:400;font-size:1.5rem;color:var(--lilac-950);letter-spacing:0;line-height:1;}
+.brand-word em{font-style:normal;color:var(--lilac-600);}
 .main-nav{display:flex;align-items:center;gap:30px;}
 .main-nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;}
 .main-nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink-soft);transition:color .15s;}
@@ -132,7 +133,7 @@ p{margin:0 0 1em;}
 }
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
 .hero h1{font-size:clamp(2.3rem,4.2vw,3.6rem);}
-.hero h1 .accent{color:var(--lilac-600);font-style:italic;}
+.hero h1 .accent{color:var(--lilac-600);font-style:italic;font-optical-sizing:none;font-variation-settings:"opsz" 60,"wght" 500;}
 .hero-sub{font-size:1.14rem;color:var(--ink-soft);max-width:52ch;margin-bottom:28px;}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px;}
 .hero-trust{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:.88rem;color:var(--ink-soft);font-weight:600;}
@@ -355,7 +356,7 @@ section{padding:88px 0;}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
 .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
 .footer-brand img{width:38px;height:38px;border-radius:9px;}
-.footer-brand span{font-family:var(--font-display);color:var(--white);font-size:1.15rem;}
+.footer-brand span{font-family:var(--font-logo);font-weight:400;color:var(--white);font-size:1.35rem;}
 .site-footer p{font-size:.9rem;color:var(--lilac-300);}
 .site-footer h4{color:var(--white);font-family:var(--font-body);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px;}
 .site-footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
@@ -367,6 +368,7 @@ section{padding:88px 0;}
 .footer-social a:hover svg{color:var(--amber-300);}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:.82rem;color:var(--lilac-300)/70;}
 .footer-bottom .legal-links{display:flex;gap:18px;flex-wrap:wrap;}
+.fb-disclaimer{font-size:.74rem;color:rgba(183,162,230,.55);text-align:center;margin:22px auto 0;max-width:680px;line-height:1.5;}
 
 /* ---------- WhatsApp float button ---------- */
 .wa-float{

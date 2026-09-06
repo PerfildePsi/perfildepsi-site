@@ -14,6 +14,7 @@ Todos os serviços são desenhados para respeitar o Código de Ética Profission
 
 - [Página inicial](https://perfildepsi.com.br/): apresentação da empresa, os três planos, como funciona, ética/LGPD e perguntas frequentes.
 - [Política de Privacidade](https://perfildepsi.com.br/politica-de-privacidade.html): como os dados de clientes, visitantes e pacientes são tratados, em conformidade com a LGPD.
+- [Política de Cookies](https://perfildepsi.com.br/politica-de-cookies.html): quais cookies o site utiliza e como gerenciá-los.
 - [Termos de Uso](https://perfildepsi.com.br/termos-de-uso.html): condições de uso do site e de contratação dos serviços.
 
 ## Contato
