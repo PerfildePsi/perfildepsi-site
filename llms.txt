@@ -2,20 +2,23 @@
 
 > Agência especializada em posicionamento digital e captação de pacientes particulares para o nicho de Psicologia. Ajuda psicólogas e psicólogos a captar pacientes particulares de forma recorrente e previsível, com serviços de presença digital construídos dentro das normas éticas do Conselho Federal de Psicologia (CFP).
 
-Perfil de Psi é uma agência de marketing digital brasileira, sediada em Potirendaba, São Paulo, focada exclusivamente em profissionais de Psicologia. A empresa oferece três planos de estrutura de posicionamento digital para consultórios particulares:
+Perfil de Psi é uma agência de marketing digital brasileira, sediada em Potirendaba, São Paulo, focada exclusivamente em profissionais de Psicologia. A empresa oferece dois planos principais de posicionamento digital para consultórios particulares:
 
-- **Plano Presença**: otimização de Perfil da Empresa no Google (Maps), criação de site/landing page de alta conversão, pacote de retratos profissionais gerados com Inteligência Artificial e revisão de posicionamento alinhada ao Código de Ética do CFP.
-- **Plano Captação**: tudo do Plano Presença, mais gestão estratégica de anúncios no Google Ads, foco em pacientes particulares de alto valor e monitoramento de métricas de conversão.
-- **Plano Automação**: tudo do Plano Captação, mais uma Secretária IA que atende via WhatsApp 24/7, treinada na abordagem de cada profissional, capaz de fazer triagem, agendar e fazer follow-up de pacientes, sempre em função administrativa (nunca clínica), com integração ao Google Workspace e conformidade com a LGPD.
+- **Presença Essencial**: site profissional com blog, gestão completa de Google Meu Negócio (SEO local, postagens e fotos semanais), blindagem de reputação e gestão de conteúdo semanal para blog, Instagram, LinkedIn e Substack. Inclui bônus de fotos profissionais com IA e social media essencial.
+- **Consultório Cheio**: tudo do Presença Essencial, mais gestão estratégica de campanhas de Google Ads para captação ativa de pacientes particulares desde o primeiro mês.
+
+Também é oferecido, de forma avulsa e sem mensalidade, o serviço de Ensaio Fotográfico com Inteligência Artificial (pacotes de 1, 3 ou 5 fotos).
+
+O pagamento é estruturado em uma taxa de adesão (setup), parcelável em até 12x no cartão, mais uma assinatura mensal recorrente.
 
 Todos os serviços são desenhados para respeitar o Código de Ética Profissional do Psicólogo e as normas do CFP sobre publicidade de serviços psicológicos, incluindo a vedação ao uso de preço como propaganda, a obrigatoriedade de identificação profissional (nome e CRP) e o sigilo sobre pacientes.
 
 ## Páginas principais
 
-- [Página inicial](https://perfildepsi.com.br/): apresentação da empresa, os três planos, como funciona, ética/LGPD e perguntas frequentes.
-- [Política de Privacidade](https://perfildepsi.com.br/politica-de-privacidade.html): como os dados de clientes, visitantes e pacientes são tratados, em conformidade com a LGPD.
-- [Política de Cookies](https://perfildepsi.com.br/politica-de-cookies.html): quais cookies o site utiliza e como gerenciá-los.
+- [Página inicial](https://perfildepsi.com.br/): apresentação da empresa, os dois planos, o ensaio fotográfico avulso, como funciona, ética e perguntas frequentes.
+- [Política de Privacidade](https://perfildepsi.com.br/politica-de-privacidade.html): como os dados de clientes e visitantes são tratados, em conformidade com a LGPD.
 - [Termos de Uso](https://perfildepsi.com.br/termos-de-uso.html): condições de uso do site e de contratação dos serviços.
+- [Política de Cookies](https://perfildepsi.com.br/politica-de-cookies.html): quais cookies o site utiliza e como gerenciá-los.
 
 ## Contato
 

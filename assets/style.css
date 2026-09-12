@@ -30,7 +30,6 @@
   --radius-md:20px;
   --radius-lg:32px;
   --font-display:"Fraunces", "Iowan Old Style", Georgia, serif;
-  --font-logo:"Berkshire Swash", "Fraunces", cursive;
   --font-body:"Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --maxw:1180px;
 }
@@ -105,15 +104,21 @@ p{margin:0 0 1em;}
 /* ---------- Header ---------- */
 .site-header{
   position:sticky;top:0;z-index:50;
+  border-bottom:1px solid var(--line);
+  isolation:isolate;
+}
+.site-header::before{
+  content:"";
+  position:absolute;inset:0;
   background:rgba(255,253,249,.88);
   backdrop-filter:saturate(160%) blur(10px);
-  border-bottom:1px solid var(--line);
+  z-index:-1;
 }
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 24px;}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .brand img{width:44px;height:44px;border-radius:10px;}
-.brand-word{font-family:var(--font-logo);font-weight:400;font-size:1.5rem;color:var(--lilac-950);letter-spacing:0;line-height:1;}
-.brand-word em{font-style:normal;color:var(--lilac-600);}
+.brand-word{font-family:var(--font-display);font-weight:600;font-size:1.32rem;color:var(--lilac-950);letter-spacing:-.01em;}
+.brand-word em{font-style:italic;color:var(--lilac-600);}
 .main-nav{display:flex;align-items:center;gap:30px;}
 .main-nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;}
 .main-nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink-soft);transition:color .15s;}
@@ -133,7 +138,7 @@ p{margin:0 0 1em;}
 }
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
 .hero h1{font-size:clamp(2.3rem,4.2vw,3.6rem);}
-.hero h1 .accent{color:var(--lilac-600);font-style:italic;font-optical-sizing:none;font-variation-settings:"opsz" 60,"wght" 500;}
+.hero h1 .accent{color:var(--lilac-600);font-style:italic;}
 .hero-sub{font-size:1.14rem;color:var(--ink-soft);max-width:52ch;margin-bottom:28px;}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px;}
 .hero-trust{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:.88rem;color:var(--ink-soft);font-weight:600;}
@@ -356,7 +361,7 @@ section{padding:88px 0;}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
 .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
 .footer-brand img{width:38px;height:38px;border-radius:9px;}
-.footer-brand span{font-family:var(--font-logo);font-weight:400;color:var(--white);font-size:1.35rem;}
+.footer-brand span{font-family:var(--font-display);color:var(--white);font-size:1.15rem;}
 .site-footer p{font-size:.9rem;color:var(--lilac-300);}
 .site-footer h4{color:var(--white);font-family:var(--font-body);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px;}
 .site-footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
@@ -368,7 +373,6 @@ section{padding:88px 0;}
 .footer-social a:hover svg{color:var(--amber-300);}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:.82rem;color:var(--lilac-300)/70;}
 .footer-bottom .legal-links{display:flex;gap:18px;flex-wrap:wrap;}
-.fb-disclaimer{font-size:.74rem;color:rgba(183,162,230,.55);text-align:center;margin:22px auto 0;max-width:680px;line-height:1.5;}
 
 /* ---------- WhatsApp float button ---------- */
 .wa-float{
@@ -455,7 +459,7 @@ section{padding:88px 0;}
 }
 
 /* ---------- Planos em 3 colunas (pricing cards) ---------- */
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;}
+.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:stretch;max-width:880px;margin:0 auto;}
 .price-card{
   background:var(--lilac-950);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);
   padding:36px 30px;color:var(--lilac-100);display:flex;flex-direction:column;gap:18px;position:relative;
@@ -477,6 +481,32 @@ section{padding:88px 0;}
   .pricing-grid{grid-template-columns:1fr;gap:40px;}
   .price-card.is-ideal{order:-1;}
 }
+
+/* ---------- Fotos avulsas (porta de entrada) ---------- */
+.grid-packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;max-width:900px;margin:0 auto;}
+.pack-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-md);padding:28px 24px;text-align:center;box-shadow:var(--shadow-sm);}
+.pack-card .pack-name{font-weight:800;color:var(--lilac-700);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.pack-card .pack-price{font-family:var(--font-display);font-size:2.2rem;color:var(--lilac-950);margin-bottom:6px;}
+.pack-card .pack-desc{color:var(--ink-soft);font-size:.9rem;margin-bottom:18px;}
+.pack-card.is-popular{border-color:var(--amber-500);position:relative;box-shadow:var(--shadow-md);}
+.pack-card.is-popular::before{
+  content:"Mais escolhido";position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--amber-500);color:var(--lilac-950);font-size:.7rem;font-weight:800;
+  padding:5px 14px;border-radius:999px;letter-spacing:.04em;
+}
+
+/* ---------- Callout de valor a longo prazo ---------- */
+.longterm-callout{
+  max-width:880px;margin:36px auto 0;background:var(--lilac-100);border:1px solid var(--lilac-300);
+  border-radius:var(--radius-md);padding:26px 30px;display:flex;gap:18px;align-items:flex-start;
+}
+.longterm-callout svg{width:28px;height:28px;flex:none;color:var(--lilac-700);margin-top:2px;}
+.longterm-callout h3{font-size:1.05rem;margin-bottom:6px;color:var(--lilac-950);}
+.longterm-callout p{color:var(--ink-soft);font-size:.92rem;margin:0;}
+
+/* ---------- Instagram embed no hero ---------- */
+.hero-video-wrap{max-width:400px;margin:0 auto;}
+.hero-video-caption{color:var(--ink-soft);font-size:.92rem;text-align:center;margin-top:16px;padding:0;}
 
 /* ---------- Legal pages ---------- */
 .legal-page{padding:64px 0 100px;}
