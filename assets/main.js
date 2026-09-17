@@ -1,104 +1,74 @@
-document.addEventListener('DOMContentLoaded', function () {
-  var toggle = document.querySelector('.nav-toggle');
-  var nav = document.querySelector('.main-nav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var isOpen = nav.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-    nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
-  /* ---------------- Calculadora de planos ---------------- */
-  var checks = Array.prototype.slice.call(document.querySelectorAll('.plan-check'));
-  var packRadios = Array.prototype.slice.call(document.querySelectorAll('input[name="fotos-pack"]'));
-  var calcBody = document.getElementById('calc-body');
-  var emptyMsg = document.getElementById('calc-empty-msg');
-  var listEl = document.getElementById('calc-selected-list');
-  var setupValueEl = document.getElementById('calc-setup-value');
-  var setupNoteEl = document.getElementById('calc-setup-note');
-  var monthlyValueEl = document.getElementById('calc-monthly-value');
-  var ctaEl = document.getElementById('calc-cta');
-  var toggleBtns = Array.prototype.slice.call(document.querySelectorAll('.calc-toggle-btn'));
-  var payMode = 'vista';
-
-  if (!checks.length || !calcBody) return;
-
-  function fmt(n) {
-    return n.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  }
-
-  function updateFotosCheckboxData() {
-    var checkedRadio = packRadios.filter(function (r) { return r.checked; })[0];
-    var fotosCheck = document.getElementById('plan-check-fotos');
-    if (checkedRadio && fotosCheck) {
-      fotosCheck.dataset.setup = checkedRadio.value;
-      fotosCheck.dataset.name = 'Retratos Autênticos — ' + checkedRadio.dataset.label;
-    }
-  }
-
-  function recalc() {
-    updateFotosCheckboxData();
-    var selected = checks.filter(function (c) { return c.checked; });
-
-    if (!selected.length) {
-      calcBody.hidden = true;
-      emptyMsg.hidden = false;
-      return;
-    }
-    emptyMsg.hidden = true;
-    calcBody.hidden = false;
-
-    var setupTotal = 0;
-    var monthlyTotal = 0;
-    var names = [];
-
-    selected.forEach(function (c) {
-      setupTotal += parseFloat(c.dataset.setup || '0');
-      monthlyTotal += parseFloat(c.dataset.monthly || '0');
-      names.push(c.dataset.name);
-    });
-
-    listEl.innerHTML = names.map(function (n) { return '<li>' + n + '</li>'; }).join('');
-
-    if (payMode === 'vista') {
-      var vista = setupTotal * 0.95;
-      setupValueEl.innerHTML = setupTotal > 0 ? 'R$ ' + fmt(vista) : 'R$ 0,00';
-      setupNoteEl.textContent = setupTotal > 0 ? 'com 5% de desconto (de R$ ' + fmt(setupTotal) + ')' : 'Nenhum valor único nos serviços selecionados';
-    } else {
-      var parcela = setupTotal / 10;
-      setupValueEl.innerHTML = setupTotal > 0 ? '10x de R$ ' + fmt(parcela) : 'R$ 0,00';
-      setupNoteEl.textContent = setupTotal > 0 ? 'sem juros — total R$ ' + fmt(setupTotal) : 'Nenhum valor único nos serviços selecionados';
-    }
-
-    monthlyValueEl.innerHTML = 'R$ ' + fmt(monthlyTotal) + (monthlyTotal > 0 ? '<small>/mês</small>' : '');
-
-    var totalPagoAgora = payMode === 'vista' ? setupTotal * 0.95 : setupTotal;
-    var msg = 'Olá! Simulei minha estrutura no site e quero fechar com: ' + names.join(', ') + '.';
-    if (setupTotal > 0) {
-      msg += ' Valor único: R$ ' + fmt(totalPagoAgora) + (payMode === 'vista' ? ' à vista.' : ' em 10x sem juros.');
-    }
-    if (monthlyTotal > 0) {
-      msg += ' Assinatura mensal: R$ ' + fmt(monthlyTotal) + '/mês.';
-    }
-    ctaEl.href = 'https://wa.me/5517991930115?text=' + encodeURIComponent(msg);
-  }
-
-  checks.forEach(function (c) { c.addEventListener('change', recalc); });
-  packRadios.forEach(function (r) { r.addEventListener('change', recalc); });
-  toggleBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      payMode = btn.dataset.mode;
-      toggleBtns.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
-      recalc();
+(() => {
+  'use strict';
+  const profiles = [...document.querySelectorAll('.profile')];
+  profiles.forEach(profile => profile.addEventListener('toggle', () => {
+    if (!profile.open) return;
+    profiles.forEach(other => { if (other !== profile) other.open = false; });
+  }));
+  const openProfileFromHash = () => {
+    const profile = profiles.find(item => '#' + item.id === location.hash);
+    if (profile) profile.open = true;
+  };
+  openProfileFromHash();
+  window.addEventListener('hashchange', openProfileFromHash);
+  const profileField = document.getElementById('consultation-profile');
+  document.querySelectorAll('[data-dialog]').forEach(button => {
+    const dialog = document.getElementById(button.dataset.dialog);
+    if (!dialog) return;
+    button.addEventListener('click', () => {
+      if (button.dataset.profile && profileField) profileField.value = button.dataset.profile;
+      dialog.showModal();
     });
   });
-
-  updateFotosCheckboxData();
-  recalc();
-});
+  document.querySelectorAll('dialog').forEach(dialog => {
+    dialog.addEventListener('click', event => {
+      if (event.target !== dialog) return;
+      const box = dialog.getBoundingClientRect();
+      if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
+    });
+  });
+  const form = document.getElementById('consultation-form');
+  if (!form) return;
+  const name = document.getElementById('consultation-name');
+  const phone = document.getElementById('consultation-phone');
+  const graduation = document.getElementById('consultation-graduation');
+  const goal = document.getElementById('consultation-goal');
+  const presence = document.getElementById('consultation-presence');
+  const message = document.getElementById('consultation-message');
+  const feedback = document.getElementById('consultation-feedback');
+  const validateName = () => name.setCustomValidity(name.value.trim() ? '' : 'Conte como podemos te chamar.');
+  const validatePhone = () => {
+    const digits = phone.value.replace(/\D/g, '');
+    const validCharacters = /^[+\d\s().-]+$/.test(phone.value);
+    phone.setCustomValidity(validCharacters && digits.length >= 10 && digits.length <= 15 ? '' : 'Confira seu WhatsApp com DDD.');
+  };
+  name.addEventListener('input', validateName);
+  phone.addEventListener('input', validatePhone);
+  graduation.addEventListener('change', () => {
+    document.getElementById('seed-form-note').hidden = graduation.value !== 'Menos de 2 anos';
+  });
+  form.addEventListener('input', () => {
+    feedback.textContent = '';
+    message.value = '';
+  });
+  form.addEventListener('submit', event => {
+    validateName();
+    validatePhone();
+    if (!form.reportValidity()) {
+      event.preventDefault();
+      return;
+    }
+    const lines = [
+      'Olá, Perfil de Psi! Gostaria de solicitar uma consultoria gratuita.',
+      '',
+      'Nome: ' + name.value.trim(),
+      'WhatsApp: ' + phone.value.trim(),
+      'Formação: ' + graduation.value,
+      'Meu foco: ' + goal.value,
+      'Perfil: ' + (profileField.value || 'Ainda estou descobrindo')
+    ];
+    if (presence.value.trim()) lines.push('Instagram ou site: ' + presence.value.trim());
+    message.value = lines.join('\n');
+    feedback.textContent = 'Confira a mensagem na aba do WhatsApp e toque em enviar para concluir sua solicitação. Se ela não abrir, use o botão novamente.';
+  });
+})();
