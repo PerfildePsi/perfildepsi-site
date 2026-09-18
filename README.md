@@ -24,7 +24,7 @@ Se optar por usar apenas um endereço `github.io`, remova o CNAME e substitua `h
 
 - Página compacta com os textos escolhidos, cinco perfis expansíveis e seus serviços.
 - Botões laranja com ícones, CNPJ no rodapé e condições especiais para menos de dois anos de formação.
-- Nota do CensoPsi com fonte e contexto.
+- Nota do CensoPsi com link para a fonte.
 - Logotipo fornecido, fontes locais e respectivas licenças.
 - Formulário de consultoria, páginas legais, sitemap, robots.txt e llms.txt.
 - Integrações de medição já existentes preservadas.
